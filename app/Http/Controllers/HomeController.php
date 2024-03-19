@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Route;
-use App\Movie;
+use App\Models\Movies;
 
 class HomeController extends Controller
 {
   public function index() {
-    $movies = Movie::all();
+    $movies = Movies::all();
     return view('home', compact('movies'));
   }
 }
